@@ -50,9 +50,7 @@ tests/
 └── test-data/                          
     ├── env.js                          # Environment config
     └── users.js                         # User fixtures
-
-.github/workflows/playwright.yml     # CI/CD pipeline
-playwright.config.js            
+     
 .env.example                         # Environment variables template
 ```
 
@@ -61,15 +59,6 @@ playwright.config.js
 
 - This is a **Smoke Suite** — it targets critical happy paths, not exhaustive coverage. The goal is fast, reliable feedback after every deployment.
 - Third-party integrations (payment gateways, KYC provider) are validated by confirming the handshake is reached, not by controlling their responses.
-
-## CI/CD
-
-Automated via **GitHub Actions** on:
-- Push or pull request to `main`/`master`
-- Daily schedule at 8:00 AM UTC
-- Manual trigger
-
-**Includes:** failure email notifications to the QA team inbox · HTML report artifacts (30-day retention) · staging environment with full secret management
 
 ## Contact
 
