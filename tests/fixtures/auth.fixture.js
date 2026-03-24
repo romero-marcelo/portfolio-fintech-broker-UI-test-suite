@@ -19,13 +19,12 @@ export const test = base.extend({
   performLogin: async ({ pageObjects }, use) => {
     const loginFunction = async (userType) => {
       const user = loginUser[userType];
-      let otp;
 
       await pageObjects.loginPage.goto();
       await pageObjects.loginPage.enterUserCredentials(user.email, user.password);
       await pageObjects.loginPage.clickLoginButton();
 
-      otp = getOtpfromAPP(user);
+      const otp = getOtpfromAPP(user);
       await pageObjects.verify2FAPage.enterOTP(otp);
 
       await pageObjects.headerSection.userGreeting().waitFor({ state: 'visible' });
