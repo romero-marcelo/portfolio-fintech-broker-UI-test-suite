@@ -1,7 +1,3 @@
-import { test, expect } from '@playwright/test';
-import { tradeAccountUser } from '../../../test-data/users.js';
-import { LoginPage, Verify2FAPage, DashboardPage, MyAccountsPage } from './index.js';
-import { getOtpfromAPP } from '../../../helpers/index.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
