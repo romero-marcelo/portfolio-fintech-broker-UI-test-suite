@@ -60,9 +60,9 @@ export class WithdrawPage {
     await this.usdAmountTextBox().click();
   }
 
-  async enterAmount() {
+  async enterAmount(amount) {
     await this.usdAmountTextBox().click();
-    await this.usdAmountTextBox().fill('1');
+    await this.usdAmountTextBox().fill(amount);
   }
 
   async clickRequestWithdrawal() {
