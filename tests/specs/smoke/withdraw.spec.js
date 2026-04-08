@@ -16,7 +16,7 @@ test('Withdraw flow and Payment Gateway handshake', async ({ pageObjects, perfor
   await withdrawPage.clickSelectWalletDropdown();
   await withdrawPage.selectUsdWallet();
   await withdrawPage.selectAmount();
-  await withdrawPage.enterAmount();
+  await withdrawPage.enterAmount(1);
   await withdrawPage.clickRequestWithdrawal();
   await withdrawPage.clickNormalWithdrawalCard();
   await withdrawPage.clickWithdraw();
