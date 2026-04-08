@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
 import dotenv from 'dotenv';
 dotenv.config();
   
-test('Deposit flow and Payment Gateway handshake', async ({ performLogin, page }) => {
+test('Deposit flow and Payment Gateway handshake', async ({ performLogin, pageObjects: { dashboardPage }, page }) => {
   
   const depositPage = new DepositsPage(page);
   const amount = faker.finance.amount(100, 500, 2);
